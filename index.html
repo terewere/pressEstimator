@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" href="css/est.css">
+
+</head>
+
+<body onload="init()">
+  <div id="container">
+
+<h2>Press Estimator</h2>
+
+        <div id="est_1">
+<form id="EstForm">
+   <fieldset>
+      <legend>ARTWORK INFORMATION:</legend>
+      <label for="art_size">Select the SIZE of the ArtWork</label>
+      <select id="art_size">
+          <option value="" >Select</option>
+          <option value="a5" >A5</option>
+         <option value="a4" >A4</option>
+         <option value="a3" >A3</option>
+         <option value="a2" >A2</option>
+     </select> <br>
+      <label for="art_qty">Quantity you want to produce:</label>
+       <input id="art_qty" value="" type="text" size="3" placeholder="0"><br>
+    </fieldset>
+
+	  <fieldset>
+	    <legend>SEPARATION AND PLATE:</legend>
+	     <label for="sep_size">Select the size of the separation</label>
+      <select id="sep_size">
+          <option value="" >Select</option>
+          <option value="a2" >A2</option>
+         <option value="a3" >A3</option>
+         <option value="a4" >A4</option>
+         <option value="a5" >A5</option>
+     </select> <br>
+       <label for="sep_cost"> Cost of Separation:</label>
+      <input id="sep_cost" value="" type="text" size="3" placeholder="0"><br>
+	     <label for="plate_cost"> Cost of plate:</label>
+	     <input id="plate_cost" value="" type="text" size="3" placeholder="0"><br>
+	  </fieldset>
+
+<fieldset>
+	 <legend>PAPER OR CARD:</legend>
+     <label for="paper_type">Select the TYPE of PAPER/CARD</label>
+    <select id="paper_type">
+        <option value="" selected="selected">Select</option>
+        <option value="nig_size" >Nigeria Size</option>
+       <option value="30X40" >30X40</option>
+   </select> <br>
+       Unit Cost of paper/card: <input id="paper_cost" type="text" size="3" value="" placeholder="0"><br><span style="font-size:80%"> <strong>[Hint: Devide the
+       price of a RIM by the quanty of papers/cards in that RIM]</strong></span><br>
+</fieldset>
+
+</div> <!-- section est one -->
+
+<div id="est_2">
+
+
+       <fieldset>
+       		 <legend>IMPRESSION</legend>
+        <label for="printer_type">Select the TYPE of PRINTER</label>
+   		 <select id="printer_type">
+        <option value="">Select</option>
+        <option value="mo" >MO</option>
+        <option value="kord" >KORD</option>
+       <option value="gto" >GTO</option>
+       <option value="10x15" >10X15</option>
+   </select> <br>
+    <label for="print_cost">Cost of Printing </label>
+    <input id="print_cost" value="" type="text" size="3" placeholder="0"><br>
+  </fieldset>
+
+  <fieldset>
+       		 <legend>ESTIMATE</legend>
+       		  <label for="btn-estimate">Click to estimate:</label>
+    <input id="btn-estimate" type="submit" value="Estimate Total"></input>
+    <input id="txt-estimate" type="text" placeholder="GHc0.00"></input>
+
+  </fieldset>
+       <div id="results"></div>
+
+</form> 
+</div>  <!-- section est two -->
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+  
+function init() {
+  document.addEventListner("deviceReady", onDeviceReady, false);
+
+
+}
+
+function onDeviceReady () {
+  alert('it works');
+
+
+}
+
+
+</script>
+</body>
+</html>
+
+
+   
